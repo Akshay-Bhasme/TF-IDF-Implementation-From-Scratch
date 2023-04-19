@@ -53,9 +53,9 @@ Consider a document containing 100 words wherein the word cat appears 3 times. T
     <h4><strong>1. Build a TFIDF Vectorizer & compare its results with Sklearn:</strong></h4>
 
 <ul>
-    <li> As a part of this task you will be implementing TFIDF vectorizer on a collection of text documents.</li>
+    <li> As a part of this task implement TFIDF vectorizer on a collection of text documents.</li>
     <br>
-    <li> You should compare the results of your own implementation of TFIDF vectorizer with that of sklearns implemenation TFIDF vectorizer.</li>
+    <li> Compare the results of your own implementation of TFIDF vectorizer with that of sklearns implemenation TFIDF vectorizer.</li>
     <br>
     <li> Sklearn does few more tweaks in the implementation of its version of TFIDF vectorizer, so to replicate the exact results you would need to add following things to your custom implementation of tfidf vectorizer:
        <ol>
@@ -70,9 +70,9 @@ Consider a document containing 100 words wherein the word cat appears 3 times. T
     <br>
     <li>Steps to approach this task:
     <ol>
-        <li> You would have to write both fit and transform methods for your custom implementation of tfidf vectorizer.</li>
-        <li> Print out the alphabetically sorted voacb after you fit your data and check if its the same as that of the feature names from sklearn tfidf vectorizer. </li>
-        <li> Print out the idf values from your implementation and check if its the same as that of sklearns tfidf vectorizer idf values. </li>
+        <li> Write both fit and transform methods for the custom implementation of tfidf vectorizer.</li>
+        <li> Print out the alphabetically sorted voacb after fit your data and check if its the same as that of the feature names from sklearn tfidf vectorizer. </li>
+        <li> Print out the idf values from implementation and check if its the same as that of sklearns tfidf vectorizer idf values. </li>
         <li> Once you get your voacb and idf values to be same as that of sklearns implementation of tfidf vectorizer, proceed to the below steps. </li>
         <li> Make sure the output of your implementation is a sparse matrix. Before generating the final output, you need to normalize your sparse matrix using L2 normalization. You can refer to this link https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.normalize.html </li>
         <li> After completing the above steps, print the output of your custom implementation and compare it with sklearns implementation of tfidf vectorizer.</li>
@@ -81,23 +81,23 @@ Consider a document containing 100 words wherein the word cat appears 3 times. T
     </li>
     <br>
    </ul>
-   
-   ## Task-2 
-   
-   <font face='georgia'>
+
+## Task-2
+
+<font face='georgia'>
     <h4><strong>2. Implement max features functionality:</strong></h4>
 
 <ul>
-    <li> As a part of this task you have to modify your fit and transform functions so that your vocab will contain only 50 terms with top idf scores.</li>
+    <li> As a part of this task Modify fit and transform functions so that the vocab will contain only 50 terms with top idf scores.</li>
     <br>
-    <li>This task is similar to your previous task, just that here your vocabulary is limited to only top 50 features names based on their idf values. Basically your output will have exactly 50 columns and the number of rows will depend on the number of documents you have in your corpus.</li>
+    <li>This task is similar to previous task, just that here vocabulary is limited to only top 50 features names based on their idf values. Basically the output will have exactly 50 columns and the number of rows will depend on the number of documents you have in the corpus.</li>
     <br>
-    <li>Here you will be give a pickle file, with file name <strong>cleaned_strings</strong>. You would have to load the corpus from this file and use it as input to your tfidf vectorizer.</li>
+    <li>A pickle file is given, with file name <strong>cleaned_strings</strong>. Load the corpus from this file and use it as input to your tfidf vectorizer.</li>
     <br>
     <li>Steps to approach this task:
     <ol>
-        <li> You would have to write both fit and transform methods for your custom implementation of tfidf vectorizer, just like in the previous task. Additionally, here you have to limit the number of features generated to 50 as described above.</li>
-        <li> Now sort your vocab based in descending order of idf values and print out the words in the sorted voacb after you fit your data. Here you should be getting only 50 terms in your vocab. And make sure to print idf values for each term in your vocab. </li>
+        <li> Write both fit and transform methods for your custom implementation of tfidf vectorizer, just like in the previous task. Additionally, here you have to limit the number of features generated to 50 as described above.</li>
+        <li> Sort your vocab based in descending order of idf values and print out the words in the sorted voacb after you fit your data. Here you should be getting only 50 terms in your vocab. And make sure to print idf values for each term in your vocab. </li>
         <li> Make sure the output of your implementation is a sparse matrix. Before generating the final output, you need to normalize your sparse matrix using L2 normalization. You can refer to this link https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.normalize.html </li>
         <li> Now check the output of a single document in your collection of documents,  you can convert the sparse matrix related only to that document into dense matrix and print it. And this dense matrix should contain 1 row and 50 columns. </li>
         </ol>
